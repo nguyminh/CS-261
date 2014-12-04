@@ -1,0 +1,35 @@
+Minh Nguyen
+7/8/2014
+
+
+
+1) 8 = 8 cost //to be at 8 pushes
+   8 + 16 = 24 cost //to be at 16 pushes
+   24 + 32 = 56 total cost  //to be at 32 pushes
+	
+		56 Cost units, with O(1)+ complexity
+
+2)8 = 8 cost    //to be at 8 pushes
+  8 + 10 = 18 cost //10 pushes
+  18 + 12 = 30 cost //12 push
+  30 + 14 = 44 cost //14 push
+  44 + 16 = 60 cost //16 push
+  60 + 18 = 78 cost //18 push
+  78 + 20 = 98 cost //20 push
+  98 + 22 = 120 cost //22 push
+  120 + 24 = 144 cost //24 push
+  144 + 26 = 170 cost //26 push
+  170 + 28 = 198 cost //28 push
+  198 + 30 = 228 cost //30 push
+  228 + 32 = 260 cost //32 push
+
+          260 Cost Units, with O(n) complexity
+
+3)  A poor performance would be to cause the worst-case scenarios to appear twice. 
+What this would mean is to push values onto this stack until it reaches capacity. 
+At this point, the capacity will double.  This would cause one O(n) to occur, The next action 
+would be to pop a value from this stack, making the capacity to shrink in half.  This causes
+another O(n) to occur, so that is O(N^2).  I would suggest creating the shrinking operation of 
+the pop() method to occur before the array is half full, but more like 1/3 full or even 1/4 full 
+or less. 
+  
